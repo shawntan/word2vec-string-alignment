@@ -9,7 +9,7 @@ def load_word2vec(filename):
 			items = line.strip().split(' ')
 			word = items[0]
 			vect = np.array([float(i) for i in items[1:] if len(i) > 1])
-			vect = vect/np.sqrt(np.sum(vect**2))
+#			vect = vect/np.sqrt(np.sum(vect**2))
 			word2vec[word] = vect
 	return word2vec
 
@@ -19,3 +19,10 @@ try:
 except Exception:
 	vectors = load_word2vec('vectors.txt')
 	pickle.dump(vectors,open('vectors.data','w'))
+
+if __name__ == "__main__":
+	vectors = load_word2vec('vectors.txt')
+	pickle.dump(vectors,open('vectors.data','w'))
+
+
+	
