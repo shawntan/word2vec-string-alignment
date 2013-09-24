@@ -12,7 +12,7 @@ def score(prev_pair,w1,w2):
 		return (0,0,0)
 
 
-def semantic_align(string1,string2):
+def wordvec_align(string1,string2):
 	a = string1.split()
 	b = string2.split()
 	"Calculates the Levenshtein distance between a and b."
@@ -50,4 +50,4 @@ def semantic_align(string1,string2):
 	return pairs,scores[n,m]
 
 print "ALIGN!"
-print semantic_align("max screen resolution","maximum laptop display size")
+print wordvec_align("max screen resolution","maximum laptop display size")
